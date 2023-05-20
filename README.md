@@ -1,5 +1,5 @@
 ﻿# Fivvy-Challenge-ApiRest-Java-Docker
-This project is made with the following technologies: Java11, springboot framework, postgres and docker databases.
+This project is made with the following technologies: Java11, springboot framework, postgres database and docker.
 
 The project is started by terminal and in the root of the project with the statement:
 Docker-compose up -d
