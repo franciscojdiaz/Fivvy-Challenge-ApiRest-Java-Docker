@@ -56,8 +56,8 @@ public class DisclaimerController {
     }
 
 
-    @GetMapping(value = "disclaimerBytext/{text}")
-    public ResponseEntity<List<Disclaimer>> geSeveraltDisclaimers(@PathVariable("text") String text) {
+    @PostMapping(value = "disclaimerBytext/")
+    public ResponseEntity<List<Disclaimer>> geSeveraltDisclaimers(@RequestParam(value = "text", required = false) String text) {
         try {
             List<Disclaimer> disclaimers = disclaimerService.getDisclaimers(text);
             if (disclaimers.size() >= 1) {

@@ -22,7 +22,7 @@ public class AcceptanceServiceImpl implements AcceptanceService {
     @Override
     public List<Acceptance> getAcceptances(String user_id) {
 
-        if (acceptanceDao.getAcceptancesByUserId(user_id).size() == 0) {
+        if (user_id.isBlank()) {
             return acceptanceDao.findAll();
         }
         return acceptanceDao.getAcceptancesByUserId(user_id);

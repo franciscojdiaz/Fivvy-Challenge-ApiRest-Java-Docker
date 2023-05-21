@@ -45,7 +45,7 @@ public class DisclaimerServiceImpl implements DisclaimerService {
     @Override
     public List<Disclaimer> getDisclaimers(String text) {
 
-        if (Objects.isNull(text) || text.length() == 0) {
+        if (text.isBlank()) {
             return disclaimerDao.findAll();
         }
         return disclaimerDao.getDisclaimerByText(text);
